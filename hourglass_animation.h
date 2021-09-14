@@ -26,7 +26,7 @@
 // second dimension is NUM_PIXELS+2 to guarantee each frame starts at
 // a 32 bit boundary
 #define NUM_PIXELS_ALIGNED ((NUM_PIXELS + 3) & ~0x03)
-static const uint8_t PROGMEM hourglass_animation[HOURGLASS_ANIMATION_FRAMES][NUM_PIXELS_ALIGNED] = {
+static const uint8_t __attribute__((aligned(4))) PROGMEM hourglass_animation[HOURGLASS_ANIMATION_FRAMES][NUM_PIXELS_ALIGNED] = {
 {   0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
